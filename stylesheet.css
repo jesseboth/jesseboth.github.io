@@ -1,0 +1,119 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    background-color: #999999;
+  }
+  h1{
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .nav {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: #333;
+    z-index: 2;
+  }
+  
+  .nav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  
+  .nav a.open {
+    float: left;
+    color: black;
+  }
+
+  .drawer_icon {
+    width: 20px;
+    height: 4px;
+    border-radius: 25% 25% 25% 25%;
+    background-color: black;
+    margin: 3px 0;
+  }
+
+  .nav a:hover .drawer_icon{
+    background-color: #0f99e3;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    width: 200px;
+  }
+  
+  .sidenav a:hover {
+    color: #0f99e3;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  #Content_Container_edge{
+    margin: auto;
+    width: 75%;
+    background-color: #505050;
+    height: 94vh;
+    z-index: -1;
+  }
+  #Content_Container{
+    margin: auto;
+    width: 99%;
+    background-color: #505050;
+    height: 94vh;
+    /* z-index: -1; */
+    overflow-y: scroll;
+  }
+
+  #Content{
+    background-color: #505050;
+    min-height: 94vh;
+  }
+
+  #Content_Container::-webkit-scrollbar {
+    width: 10px;
+}
+
+#Content_Container::-webkit-scrollbar-thumb {
+    background: #0f99e3;
+    border-radius: 20px;
+}
+
+#Content_Container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+}
