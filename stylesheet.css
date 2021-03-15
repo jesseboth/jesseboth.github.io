@@ -12,10 +12,11 @@
   
   .nav {
     overflow: hidden;
-    position: relative;
+    position: fixed;
     width: 100%;
     background-color: #333;
     z-index: 2;
+    top: 0;
   }
   
   .nav a {
@@ -84,24 +85,29 @@
   }
 
   #Content_Container_edge{
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 75%;
     background-color: #505050;
     height: 100vh;
     z-index: -1;
+    margin-top: 50px;
+    display: block;
+    position: relative;
   }
   #Content_Container{
-    margin: auto;
     width: 99%;
     background-color: #505050;
-    height: 96vh;
-    /* z-index: -1; */
+    height: 94vh;
     overflow-y: scroll;
   }
 
-  #Content{
+  .Content{
     background-color: #505050;
     min-height: 94vh;
+  }
+  .not_Content{
+    display: none;
   }
 
   #Content_Container::-webkit-scrollbar {
