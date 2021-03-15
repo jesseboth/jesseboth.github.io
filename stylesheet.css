@@ -87,14 +87,14 @@
     margin: auto;
     width: 75%;
     background-color: #505050;
-    height: 94vh;
+    height: 100vh;
     z-index: -1;
   }
   #Content_Container{
     margin: auto;
     width: 99%;
     background-color: #505050;
-    height: 94vh;
+    height: 96vh;
     /* z-index: -1; */
     overflow-y: scroll;
   }
