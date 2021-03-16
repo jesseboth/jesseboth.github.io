@@ -26,7 +26,7 @@ function close_nav(){
 }
 
 function switch_content(content_display){
-    data = ["-Home", "-Projects", "-AboutMe", "-Contact"]
+    data = ["-Home", "-Projects", "-AboutMe", "-Education"]
     for(i = 0; i < data.length; i++){
         document.getElementById(data[i]).classList.remove("Content");
         document.getElementById(data[i]).classList.add("not_Content");
