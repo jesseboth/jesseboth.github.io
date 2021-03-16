@@ -7,7 +7,7 @@ function open_nav(){
     if(!nav_open){
         document.getElementById("drawer").classList.remove("closed");
         document.getElementById("drawer").classList.add("open");
-        document.getElementById("mySidenav").style.width = "200px";
+        document.getElementById("sidenav").style.width = "200px";
         nav_open = !nav_open
     }
     else{
@@ -19,7 +19,7 @@ function close_nav(){
     if(nav_open && !nav_button){
         document.getElementById("drawer").classList.remove("open");
         document.getElementById("drawer").classList.add("closed");
-        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("sidenav").style.width = "0";
         nav_open = !nav_open
     }
     nav_button = false

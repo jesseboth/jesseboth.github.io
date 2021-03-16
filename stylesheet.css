@@ -3,13 +3,28 @@
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     background-color: #999999;
+    background-image: url("images/background.png");
   }
   h1{
     padding-top: 10px;
     margin: auto;
     text-align: center;
   }
-  
+
+  .head{
+    font-family: Orbitron;
+    user-select: none;
+  }
+  .head:hover{
+    color: #0f99e3;
+  }
+  #header{
+    top: -8px;
+    font-size: 30px;
+    left:10%;
+    position: absolute;
+    white-space: nowrap;
+  }
   .nav {
     overflow: hidden;
     position: fixed;
@@ -25,6 +40,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    cursor: pointer;
   }
 
   
@@ -44,6 +60,7 @@
   .nav a:hover .drawer_icon{
     background-color: #0f99e3;
   }
+
   .sidenav {
     height: 100%;
     width: 0;
@@ -65,23 +82,37 @@
     display: block;
     transition: 0.3s;
     width: 200px;
+    cursor: pointer;
+  }
+
+  .sidenav .contact {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    width: 200px;
+    cursor: pointer;
   }
   
   .sidenav a:hover {
     color: #0f99e3;
   }
+  .sidenav .contact:hover {
+    color: #0f99e3;
+  }
   
-  .sidenav .closebtn {
+  #info{
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    bottom:10vh; 
   }
   
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+    .sidenav b {font-size: 12px;}
+    
   }
 
   #Content_Container_edge{
@@ -100,6 +131,7 @@
     background-color: #505050;
     height: 96vh;
     overflow-y: scroll;
+    overflow-x:hidden;
   }
 
   .Content{
@@ -126,4 +158,24 @@
 #Content_Container::-webkit-scrollbar-track {
     background: transparent;
     border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Orbitron-light";
+  src: url("fonts/orbitron-light.otf");
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("fonts/orbitron-medium.otf");
+}
+
+@font-face {
+  font-family: "Orbitron-black";
+  src: url("fonts/orbitron-black.otf");
+}
+
+@font-face {
+  font-family: "Orbitron-bold";
+  src: url("fonts/orbitron-bold.otf");
 }
