@@ -3,7 +3,7 @@
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     background-color: #999999;
-    background-image: url("images/background_2.png");
+    background-image: url("images/background.png");
   }
 
   h1{
@@ -113,13 +113,23 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
     .sidenav b {font-size: 12px;}
-    
+  }
+
+  @media screen and (max-width: 800px) {
+    #Content_Container_edge{ 
+      width: 100%;
+    }  
+  }
+
+  @media screen and (min-width: 800px) {
+    #Content_Container_edge{ 
+      width: 80%;
+    }  
   }
 
   #Content_Container_edge{
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
     background-color: #505050;
     z-index: -1;
     margin-top: 50px;
@@ -138,7 +148,7 @@
   .Content{
     margin: auto;
     background-color: #505050;
-    min-height: 90vh;
+    /* min-height: 90vh; */
     margin-top: 20px;
     margin-bottom: 20px;
     width: 95%;
