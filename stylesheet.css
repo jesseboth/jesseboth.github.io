@@ -3,9 +3,22 @@
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     background-color: #999999;
-    background-image: url("images/background.png");
   }
-
+  .gutter{
+    height: 2160px;
+    position: absolute;
+    z-index: -2;
+  }
+  #image_1{
+    background-image: url("images/background_l.png"); 
+    left:0;
+    width: 626px;
+  }
+  #image_2{
+    background-image: url("images/background_r.png"); 
+    right:0;
+    width: 645px;
+  }
   h1{
     padding-top: 10px;
     margin: auto;
