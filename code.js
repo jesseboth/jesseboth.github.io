@@ -26,7 +26,7 @@ function close_nav(){
 }
 
 function switch_content(content_display){
-    data = ["-Home", "-Projects", "-AboutMe", "-Education"]
+    data = ["-Blank", "-Home", "-Projects", "-AboutMe", "-Education"]
     for(i = 0; i < data.length; i++){
         document.getElementById(data[i]).classList.remove("Content");
         document.getElementById(data[i]).classList.add("not_Content");
@@ -41,6 +41,9 @@ function run(){
     var pound=window.location.href.split("#");
     if(pound.length > 1){
         switch_content(pound[1])
+    }
+    else{
+        switch_content("Home")
     }
     document.body.addEventListener("click", close_nav);
 }
