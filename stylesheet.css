@@ -136,6 +136,7 @@
 
   @media screen and (min-width: 800px) {
     #Content_Container_edge{ 
+      min-width: 800px;
       width: 80%;
     }  
   }
