@@ -32,11 +32,12 @@ h1{
 .head:hover{
   color: #0f99e3;
 }
+
 #header{
-  top: -8px;
+  margin-top: -7px;
+  position: relative;
+  left:calc(10% - 50px);
   font-size: 30px;
-  left:10%;
-  position: absolute;
   white-space: nowrap;
 }
 .nav {
@@ -46,6 +47,7 @@ h1{
   background-color: #333;
   z-index: 2;
   top: 0;
+  height: 52px;
 }
 
 .nav a {
