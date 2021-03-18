@@ -78,16 +78,16 @@ h1{
 }
 
 .sidenav {
-  height: 100%;
+  height: calc(100% - 52px);
   width: 0;
   position: fixed;
-  z-index: 1;
-  top: 0;
+  z-index: 2;
+  top: 52px;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
 .sidenav a {
@@ -121,27 +121,9 @@ h1{
 
 #info{
   position: absolute;
-  bottom:10vh; 
+  bottom:3%;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-  .sidenav b {font-size: 12px;}
-}
-
-@media screen and (max-width: 800px) {
-  #Content_Container_edge{ 
-    width: 100%;
-  }  
-}
-
-@media screen and (min-width: 800px) {
-  #Content_Container_edge{ 
-    min-width: 800px;
-    width: 80%;
-  }  
-}
 
 #Content_Container_edge{
   margin-left: auto;
@@ -204,4 +186,24 @@ src: url("fonts/orbitron-black.otf");
 @font-face {
 font-family: "Orbitron-bold";
 src: url("fonts/orbitron-bold.otf");
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .sidenav b {font-size: 12px;}
+}
+
+@media screen and (max-width: 800px) {
+  #Content_Container_edge{ 
+    width: 100%;
+  }  
+}
+
+@media screen and (min-width: 800px) {
+  #Content_Container_edge{ 
+    min-width: 800px;
+    width: 80%;
+  }  
 }
