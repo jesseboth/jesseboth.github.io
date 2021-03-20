@@ -8,8 +8,12 @@ function run(){
 
 nav_open = false;
 nav_button = false;
-scroll_back = null
-back = false
+content = false
+scroll_to = null
+jump_after = null
+jump_after_int = 0
+jump_after_int = null
+previous_hash = null
 function open_nav(){
     nav_button = true
     if(!nav_open){
@@ -34,6 +38,18 @@ function close_nav(){
 }
 
 function switch_content(content_display){
+    content = true
+
+    scroll_by = document.getElementById("Content_Container").scrollTop
+    history.replaceState({"title":content_display, 
+    "scroll": scroll_by},
+    '');
+
+    location.hash = content_display
+    previous_hash = content_display
+    show_content(content_display)
+}
+function show_content(content_display){
     data = ["-Blank", "-Home", "-Projects", "-AboutMe", "-Education"]
     for(i = 0; i < data.length; i++){
         document.getElementById(data[i]).classList.remove("Content");
@@ -42,25 +58,59 @@ function switch_content(content_display){
 
     document.getElementById("-"+content_display).classList.remove("not_Content");
     document.getElementById("-"+content_display).classList.add("Content");
-    location.hash = content_display
+    if(jump_after != null){
+        jump(jump_after)
+        jump_after = null
+    }
 }
 
 function jump(element){  
+    jump_after = element
     var get = document.getElementById(element);  
-    document.getElementById("Content_Container").scrollTo(0,get.offsetTop); 
+    document.getElementById("Content_Container").scrollTo(0,get.offsetTop);
 } 
+
+function jump_int(integer){
+    document.getElementById("Content_Container").scrollTo(0,integer); 
+}
 
 function jump_top(){
     document.getElementById("Content_Container").scroll(0,0); 
 }
 
 function go_hash(){
-    var pound=window.location.href.split("#");
-    if(pound.length > 1){
-        switch_content(pound[1])
+    var pound=location.hash;
+    if(pound.length != ""){
+        show_content(pound.substring(1))
     }
     else{
         switch_content("Home")
+        scroll_by = document.getElementById("Content_Container").scrollTop
+        history.pushState({"title":"Home", 
+        "scroll": 0},
+        '');
     }
     document.body.addEventListener("click", close_nav);
+    if(jump_after_int != 0){
+        jump_int(jump_after_int)
+        jump_after_int = 0
+    }
+}
+
+window.onpopstate = function() {
+    if(!content){
+        switch(location.hash) {
+            case "#Home":
+            case "#Projects":
+            case "#AboutMe":
+            case "#Education":
+                if(history.state != null){
+                    jump_after_int = history.state["scroll"];                    
+                }
+                break
+            default:            
+        }
+        
+    }
+    content = false
 }

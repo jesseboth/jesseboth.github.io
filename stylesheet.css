@@ -163,6 +163,7 @@ h1{
 
 #Content_Container::-webkit-scrollbar {
   width: 10px;
+  
 }
 
 #Content_Container::-webkit-scrollbar-thumb {
@@ -182,6 +183,8 @@ h1{
 .jumpto{
   background-color: #0f99e3;
   padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
