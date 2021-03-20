@@ -1,7 +1,15 @@
 ﻿window.onload = run
+window.onhashchange = go_hash
+
+function run(){ 
+ go_hash()
+}
+
 
 nav_open = false;
 nav_button = false;
+scroll_back = null
+back = false
 function open_nav(){
     nav_button = true
     if(!nav_open){
@@ -42,7 +50,11 @@ function jump(element){
     document.getElementById("Content_Container").scrollTo(0,get.offsetTop); 
 } 
 
-function run(){ 
+function jump_top(){
+    document.getElementById("Content_Container").scroll(0,0); 
+}
+
+function go_hash(){
     var pound=window.location.href.split("#");
     if(pound.length > 1){
         switch_content(pound[1])
