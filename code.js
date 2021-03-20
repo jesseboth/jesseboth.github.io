@@ -85,10 +85,6 @@ function go_hash(){
     }
     else{
         switch_content("Home")
-        scroll_by = document.getElementById("Content_Container").scrollTop
-        history.pushState({"title":"Home", 
-        "scroll": 0},
-        '');
     }
     document.body.addEventListener("click", close_nav);
     if(jump_after_int != 0){

@@ -156,6 +156,7 @@ h1{
   min-height: calc(100% - 50px);
   padding-bottom: 25px;
   width: calc(100% - 20px);
+  user-select: none;
 }
 .not_Content{
   display: none;
