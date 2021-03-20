@@ -37,7 +37,12 @@ function switch_content(content_display){
     location.hash = content_display
 }
 
-function run(){
+function jump(element){  
+    var get = document.getElementById(element);  
+    document.getElementById("Content_Container").scrollTo(0,get.offsetTop); 
+} 
+
+function run(){ 
     var pound=window.location.href.split("#");
     if(pound.length > 1){
         switch_content(pound[1])

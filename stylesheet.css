@@ -4,6 +4,9 @@
   overflow: hidden;
   background-color: #999999;
 }
+.break{
+  height: 50px;
+}
 .gutter{
   height: 2160px;
   position: absolute;
@@ -29,16 +32,20 @@ h1{
   font-family: Orbitron;
   user-select: none;
 }
+
 .head:hover{
   color: #0f99e3;
 }
 
 #header{
-  margin-top: -7px;
   position: relative;
   left:calc(10% - 50px);
-  font-size: 30px;
   white-space: nowrap;
+  height: 42px;
+  margin: auto;
+  font-size: 30px;
+  padding: 6px 4px;
+  display: inline-block;
 }
 .nav {
   overflow: hidden;
@@ -166,6 +173,21 @@ h1{
 #Content_Container::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 20px;
+}
+.jumpto_container{
+  width: 75%;
+  margin-left: 12.5%;
+  text-align: center;
+}
+.jumpto{
+  background-color: #0f99e3;
+  padding: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 10px;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 @font-face {
