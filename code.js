@@ -75,7 +75,10 @@ function jump_int(integer){
 }
 
 function jump_top(){
-    document.getElementById("Content_Container").scroll(0,0); 
+    document.getElementById("Content_Container").scroll(0,0);
+    history.replaceState({"title":current_hash, 
+    "scroll": 0},
+    ''); 
 }
 
 function go_hash(){
@@ -95,10 +98,6 @@ function go_hash(){
 
 function get_scroll(){
     scroll_by = document.getElementById("Content_Container").scrollTop
-    scroll_by = document.getElementById("Content_Container").scrollTop
-    history.replaceState({"title":current_hash, 
-    "scroll": scroll_by},
-    '');
     if(top_hidden && scroll_by > 50){
         document.getElementById("TOP").style.visibility = "visible"
         top_hidden = false
@@ -109,6 +108,9 @@ function get_scroll(){
         top_hidden = true
         top_visible = false
     }
+    history.replaceState({"title":current_hash, 
+    "scroll": scroll_by},
+    '');
 }
 
 window.onpopstate = function() {
