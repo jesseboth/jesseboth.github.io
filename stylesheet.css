@@ -153,8 +153,8 @@ h1{
 .Content{
   margin: auto;
   background-color: #505050;
-  min-height: calc(100% - 50px);
-  padding-bottom: 25px;
+  min-height: calc(100% - 100px);
+  padding-bottom: 100px;
   width: calc(100% - 20px);
   user-select: none;
 }
@@ -197,9 +197,10 @@ h1{
   opacity: .5;
   background-color: #333;
   bottom: 10px;
-  position: fixed;
-  margin-top: -100px;
-  right: calc(10% + 20px);
+  position:sticky;
+  /* right: 0; */
+  float: right;
+  margin-right: 5px;
   height: 30px;
   width:70px;
   text-align: center;
@@ -255,7 +256,8 @@ src: url("fonts/orbitron-bold.otf");
 @media screen and (max-width: 800px) {
   #Content_Container_edge{ 
     width: 100%;
-  }  
+  }
+ 
 }
 
 @media screen and (min-width: 800px) {
