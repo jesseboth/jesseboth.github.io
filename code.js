@@ -3,6 +3,7 @@ window.onhashchange = go_hash
 
 function run(){ 
  go_hash()
+ setInterval(get_scroll, 200)
 }
 
 
@@ -14,6 +15,7 @@ jump_after = null
 jump_after_int = 0
 jump_after_int = null
 previous_hash = null
+current_hash = ""
 function open_nav(){
     nav_button = true
     if(!nav_open){
@@ -40,17 +42,13 @@ function close_nav(){
 function switch_content(content_display){
     content = true
 
-    scroll_by = document.getElementById("Content_Container").scrollTop
-    history.replaceState({"title":content_display, 
-    "scroll": scroll_by},
-    '');
-
     location.hash = content_display
     previous_hash = content_display
     show_content(content_display)
 }
 function show_content(content_display){
     data = ["-Blank", "-Home", "-Projects", "-AboutMe", "-Education"]
+    current_hash = content_display
     for(i = 0; i < data.length; i++){
         document.getElementById(data[i]).classList.remove("Content");
         document.getElementById(data[i]).classList.add("not_Content");
@@ -91,6 +89,14 @@ function go_hash(){
         jump_int(jump_after_int)
         jump_after_int = 0
     }
+}
+
+function get_scroll(){
+    scroll_by = document.getElementById("Content_Container").scrollTop
+    scroll_by = document.getElementById("Content_Container").scrollTop
+    history.replaceState({"title":current_hash, 
+    "scroll": scroll_by},
+    '');
 }
 
 window.onpopstate = function() {
