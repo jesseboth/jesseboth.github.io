@@ -193,6 +193,37 @@ h1{
   white-space: nowrap;
   display: inline-block;
 }
+#TOP{
+  opacity: .5;
+  background-color: #333;
+  bottom: 10px;
+  position: fixed;
+  margin-top: -100px;
+  right: calc(10% + 20px);
+  height: 30px;
+  width:70px;
+  text-align: center;
+  border-radius: 10px;
+  visibility: hidden;
+  user-select: none;
+}
+#top{
+  user-select: none;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 30px;
+  font-family: Orbitron;
+  color: #0f99e3;
+}
+#up_arrow{
+  display: inline-block;
+  height: 15px;
+  width: 12px;
+}
+#TOP:hover{
+  opacity: .9;
+  cursor: pointer;
+}
 
 @font-face {
 font-family: "Orbitron-light";

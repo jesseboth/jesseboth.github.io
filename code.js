@@ -16,6 +16,8 @@ jump_after_int = 0
 jump_after_int = null
 previous_hash = null
 current_hash = ""
+top_hidden = true
+top_visible = false
 function open_nav(){
     nav_button = true
     if(!nav_open){
@@ -97,6 +99,16 @@ function get_scroll(){
     history.replaceState({"title":current_hash, 
     "scroll": scroll_by},
     '');
+    if(top_hidden && scroll_by > 50){
+        document.getElementById("TOP").style.visibility = "visible"
+        top_hidden = false
+        top_visible = true
+    }
+    else if(top_visible && scroll_by <= 50){
+        document.getElementById("TOP").style.visibility = "hidden"
+        top_hidden = true
+        top_visible = false
+    }
 }
 
 window.onpopstate = function() {
