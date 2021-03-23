@@ -226,6 +226,41 @@ h1{
   cursor: pointer;
 }
 
+.scrollimg {
+  position: relative;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scrollimg img {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.content_image{
+  width: 75%;
+  max-width: 1000px;
+}
+.scrollimg a:hover {
+  background-color: #777;
+}
+.scrollimg::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.scrollimg::-webkit-scrollbar-thumb {
+  background: #0f99e3;
+  border-radius: 20px;
+}
+
+.scrollimg::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 20px;
+}
+
+
 @font-face {
 font-family: "Orbitron-light";
 src: url("fonts/orbitron-light.otf");
