@@ -138,6 +138,8 @@ h1{
   background-color: #505050;
   z-index: -1;
   height: 100vh;
+  /* max-width: ; */
+  max-width: 1400px;
 }
 #Content_Container{
   margin: auto;
@@ -157,6 +159,7 @@ h1{
   padding-bottom: 100px;
   width: calc(100% - 20px);
   user-select: none;
+  font-size:1.2rem;
 }
 .not_Content{
   display: none;
@@ -230,6 +233,7 @@ h1{
   position: relative;
   overflow: auto;
   white-space: nowrap;
+  margin-top: 15px;
 }
 
 .scrollimg img {

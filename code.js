@@ -94,6 +94,9 @@ function go_hash(){
         jump_int(jump_after_int)
         jump_after_int = 0
     }
+    if(history.state != null){
+        jump_int(history.state["scroll"])
+    }
 }
 
 function get_scroll(){
