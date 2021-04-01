@@ -19,6 +19,7 @@ current_hash = ""
 top_hidden = true
 top_visible = false
 function open_nav(){
+    hide_resume()
     nav_button = true
     if(!nav_open){
         document.getElementById("drawer").classList.remove("closed");
@@ -114,6 +115,12 @@ function get_scroll(){
     history.replaceState({"title":current_hash, 
     "scroll": scroll_by},
     '');
+}
+function hide_resume(){
+    document.getElementById("resume_container_edge").style.visibility = "hidden"
+}
+function show_resume(){
+    document.getElementById("resume_container_edge").style.visibility= "visible"
 }
 
 window.onpopstate = function() {
