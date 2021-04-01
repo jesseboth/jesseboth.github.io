@@ -334,7 +334,11 @@ h1{
 #resume_container_edge{
   /* background-color: #333; */
   width: 60%;
-  margin-left: 20%;
+  /* margin-left: 20%; */
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   margin-top: -20px;
   padding-top: 30px;
   overflow: hidden;
@@ -343,6 +347,7 @@ h1{
   position:absolute;
   height: 96%;
   max-height: 950px; 
+  min-width: 550px;
   visibility: hidden;
 }
 #resume_container{
@@ -421,6 +426,12 @@ src: url("fonts/orbitron-bold.otf");
   #Content_Container_edge{ 
     width: 100%;
   } 
+  #resume_container_edge{
+    width: 85%;
+    max-width: 550px;
+  }
+
+
 }
 
 @media screen and (min-width: 800px) {
