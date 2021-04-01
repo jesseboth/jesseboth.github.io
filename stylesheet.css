@@ -429,6 +429,7 @@ src: url("fonts/orbitron-bold.otf");
   #resume_container_edge{
     width: 85%;
     max-width: 550px;
+    min-width: 400px;
   }
 
 
