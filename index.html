@@ -55,7 +55,7 @@
         </div>
         <div class="text">
           Currently I am a junior in Computer Engineering at the University at Buffalo. I have had an interest
-          in programming and hardware since a very young age.  I am pursuing computer engineering to further my
+          in programming and hardware since was little.  I am pursuing computer engineering to further my
           knowledge about how the technology that surrounds us works.
 
           <br>
@@ -86,76 +86,167 @@
       </div>
 
       <div id="-Education" class="not_Content">
+        <div class="jumpto_container">
+          <span class="jumpto" onclick='jump("SYSPROG")'>Systems Programming</span>
+          <span class="jumpto" onclick='jump("COMPORG")'>Comnputer Organization</span>
+          <span class="jumpto" onclick='jump("MICROP")'>Microprocessors</span>
+          <span class="jumpto" onclick='jump("MATH")'>Math/Physics</span>
+        </div>
         <h1>Education</h1>
+        <br>
+        This section conatains summary of what I did and what I learned in
+        some of my favorite classes. My education also includes several math classes,
+        physics, and some electrical engineering classes, but my favorite classes involve
+        low level programming and microprocessors.
+        <div class="break"></div>
 
+        <h2 id="SYSPROG">Systems Programming</h2>
+          This class had many labs and projects that were programmed in C.
+          Prior to this class, programming was not coming easy to me, but this 
+          is where it all started to click for me.  In this class, I learned
+          memory manipulation, and pointer math. These skills have vastly helped
+          me program in assembly, because memory manipulation is so important.
+          Unfortunately I am unable to 
+          share some of the code that was produced as a part of this class, due to UB's
+          strict academic violation policy, but I can share what was done.
+          <br>
+          <br>
+          One of the major projects that was included in this class was one where 
+          I had to develop an implementaion of the C functions: malloc(), calloc(), realloc(), and 
+          free(). In order to create this implementation, sbrk() was used inorder to create a chunk
+          of memory that was accessible.  I then used a linked list that stored valid memory
+          addresses that were 4 bytes apart.  malloc, pulled the required amount of memory off 
+          the linked list, and free put memory back onto the linked list.  While this, is 
+          an over simplified version of what complexities were involved in this program, 
+          this project boosted my confidence significantly as a developer. 
+          <div class="break"></div>
+
+        <h2 id="COMPORG">Computer Organization</h2>
+          This class involved my introduction to assembly, but specifically MIPS assembly
+          was used.  The main part of this class, was to learn how a computer actually
+          works.  I learned how languages like C are compiled into assembly and how that
+          assembly goes through the assembly to be converted to machine code.
+          <br>
+          <br>
+          The major project that this class had was to take a list of x,y coordinates 
+          and sort the coordinates by euclidean distance in MIPS assembly.  The sort 
+          algorithm that I used was essentially selection sort.  One thing that I enjoyed
+          in this project that was not a requirement was finding a way to print that data
+          to the terminal screen in an organized manner.  obviously testing is not easy 
+          when it comes to programming in assembly and this subroutine to print the data
+          vastly helped with my success on this project.  The code for this project can be
+          seen here: 
+          <a class="link" href="https://github.com/jesseboth/Least-Euclidean-Distance/tree/master/Project/">Least Euclidean Distance</a>
+          <div class="break"></div>
+
+        <h2 id="MICROP">Microprocessors</h2>
+          As of Spring '21 I am currently enrolled in this class. I have learned a lot so far.
+          This course utilizes the Tiva C processor model EK-TM4C123GXL. All the programming
+          in this class has been done in assembly.  I have learned how to utilize gpio from the 
+          microprocessor as well as UART control. 
+
+          At the moment of writing this, I am developing a program to similate the game "Flow Free".
+          This project is using everything that I have learned in the class thus far. I am using ANSI
+          escape sequences to provide color to the game and several custom made data structures in order
+          to track positions of the links and cursor movement.
+          <div class="break"></div>
+
+        <h2 id="MATH">Math/Physics</h2>
+        Throughout my college career I was required to take several math and physics courses.
+        The courses include:
+        <br>
+         - Calculus I, II, III
+        <br>
+         - Discrete Math
+        <br>
+         - Probability and Statistics
+        <br>
+         - Differential Equations
+        <br>
+         - Linear Algebra
+        <br>
+         - Physics I, II
 
       </div>
 
       <div id="-Projects" class="not_Content">
         <div class="jumpto_container">
-          <span class="jumpto" onclick='jump("TEST")'>Section 1</span>
-          <span class="jumpto" onclick='jump("TEST")'>Section 2 long name</span>
-          <span class="jumpto" onclick='jump("TEST")'>Section 3</span>
-          <span class="jumpto" onclick='jump("TEST")'>Section 4</span>
-          <span class="jumpto" onclick='jump("TEST")'>Section 1 another long name</span>
-          <span class="jumpto" onclick='jump("TEST")'>Section 2 long name</span>
-          <span class="jumpto" onclick='jump("TEST")'>short</span>
-          <span class="jumpto" onclick='jump("TEST")'>Section 4</span>
+          <span class="jumpto" onclick='jump("Calendar")'>Calendar</span>
         </div>
         <h1>Projects</h1>
-          
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        I have worked on many different projects, but the ones
+        I tend to stick with are the ones that have a practical purpose.
+        I find it boring to work on a project just because I can, and
+        find that I become more invested if the project has a real purpose.
+        <div class="break"></div>
+
+        <h2 id="Calendar">Calendar</h2>
+          This project started as a simple new tab page. I didn't like the way that
+          chromes dark mode new tab looked, so I thought that I could do it better.
+          This started out by having the search bar and the icons on the top right of
+          the screen and it evolved from there.
+          <br>
+          <br>
+          I began this project a couple weeks before Covid 19 caused everything to 
+          go online.  I had the idea to incorporate my calendar into this new tab shortly
+          before this had happened.  During this time I had been in a data structures
+          class, so it was the perfect time to take on this type of project and it 
+          is also the reason I chose to use scala.  I knew there
+          were ways that I could download the ical file automatically, it was just a matter
+          of parsing the file.  This code has undergone several ground up rebuilds and at this 
+          moment I would say it is perfect for my use case.
+          <br>
+          <br>
+          One of the main parts of this calendar were that I wanted to have the location
+          displayed on the new tab page.  After this implementation and after 
+          moveing to online, I realized that I could place my class meeting links in the 
+          location field. After some regex to place the main site location as the name
+          to be display, I know had a way to enter my lectures without having to search
+          for a link for a specific class. To this day I have yet to miss an online lecture.
+          <br>
+          <br>
+          When the semester ended I had the idea to make a full blown calendar using the same
+          parsing code that I used for the new tab.  Now, making a simple calendary that was
+          placed in a simple html grid would have been easy, but I wanted the ability to have
+          user input.  I developed a way that I could click on a specific day and that days events
+          would appear on the left of the calendar. I also included time indicators on each event.
+          When an event is approaching it turns cyan and when it is current it turns red.  There are
+          a few other options that can manipulate this feature, like it flashes red if exam is in the
+          description and it is currently an active event.
+          <br>
+          <br>
+          After the calendar was designed I purchased a raspberry pi that now sits in my room
+          and displays my calendar all day with the help of some bash files to initiate parsing
+          every thiry minutes and to power off the display at night.
+          <br>
+          <br>
+          There was a lot of thought that went into the design and implementation of this project. 
+          You can see the code for this project here:
+          <a class="link" href="https://github.com/jesseboth/Calendar/tree/master/src/main">Calendar</a>
+
         <div class="scroll_container">
           <div class="scroll_button"></div>
           <div class="scrollimg_container">
             <div class="scrollimg">
-              <img class="content_image" src="images/test_image.png" alt="test_img">
-              <img class="content_image" src="images/test_image.png" alt="test_img">
-              <img class="content_image" src="images/test_image.png" alt="test_img">
-              <img class="content_image" src="images/test_image.png" alt="test_img">
+              <img class="content_image" src="images/calendar.png" alt="cal">
+              <img class="content_image" src="images/new_tab.png" alt="tab">
             </div>
           </div>
           <div class="scroll_button"></div>
         </div>
         
         <div class="break"></div>
-        <h1 id="TEST">TEST</h1>
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        <!-- <h2 id="TEST">TEST</h2> -->
 
 
       </div>
 
       <div id="-AboutMe" class="not_Content">
         <h1>About Me</h1>
-        <div class="jumpto_container">
+        <!-- <div class="jumpto_container">
         <span class="jumpto" onclick='switch_content("Projects"); jump("TEST")'>link another section</span>
-        </div>
-
+        </div> -->
+        <h2>Work In Progress</h2>
       </div>
       <!-- CONTENT GOES HERE -->
       <div id="TOP" onclick="jump_top()">

@@ -31,6 +31,12 @@ h1{
   text-align: center;
 }
 
+h2{
+  padding-top: 10px;
+  margin: auto;
+  text-align: center;
+}
+
 .head{
   font-family: Orbitron;
   user-select: none;
