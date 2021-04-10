@@ -36,6 +36,9 @@ h2{
   margin: auto;
   text-align: center;
 }
+h4{
+  margin-bottom: 2px;
+}
 
 .head{
   font-family: Orbitron;
