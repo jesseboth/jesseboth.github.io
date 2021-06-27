@@ -111,19 +111,16 @@ function go_hash(){
     document.body.addEventListener("click", close_nav);
 
     if(project_go_to != null){
-        console.log(project_go_to)
         jump(project_go_to)
         project_go_to = null    //reset
         jump_after_int = 0
     }
     else if(jump_after_int != 0){
-        console.log("jump", jump_after_int)
         jump_int(jump_after_int)
         jump_after_int = 0
     }
 
     if(history.state != null){
-        console.log("here")
         jump_int(history.state["scroll"])
     }
 }
