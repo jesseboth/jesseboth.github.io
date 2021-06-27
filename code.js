@@ -1,23 +1,27 @@
 ﻿window.onload = run
 window.onhashchange = go_hash
 
+/*start up function*/
 function run(){ 
  go_hash()
  setInterval(get_scroll, 200)
 }
 
 
-nav_open = false;
-nav_button = false;
-content = false
-scroll_to = null
-jump_after = null
-jump_after_int = 0
-jump_after_int = null
-previous_hash = null
-current_hash = ""
-top_hidden = true
-top_visible = false
+nav_open = false;       //side nav
+nav_button = false;     //side nav button
+content = false         //content visible
+scroll_to = null        //scroll position
+jump_after = null       //scroll to after...
+jump_after_int = null   //scroll to integer pos
+previous_hash = null    //previous content page
+current_hash = ""       //current content page
+top_hidden = true       //top button hidden
+top_visible = false     //top button visible
+project_go_to = null    //jump to from url
+
+
+/*open side nav*/
 function open_nav(){
     hide_resume()
     nav_button = true
@@ -32,6 +36,7 @@ function open_nav(){
     }
 }
 
+/*close side nav*/
 function close_nav(){
     if(nav_open && !nav_button){
         document.getElementById("drawer").classList.remove("open");
@@ -42,6 +47,7 @@ function close_nav(){
     nav_button = false
 }
 
+/*change what content page is visible*/
 function switch_content(content_display){
     content = true
 
@@ -49,6 +55,8 @@ function switch_content(content_display){
     previous_hash = content_display
     show_content(content_display)
 }
+
+/*make the content visible*/
 function show_content(content_display){
     data = ["-Blank", "-Home", "-Projects", "-AboutMe", "-Education"]
     current_hash = content_display
@@ -65,16 +73,19 @@ function show_content(content_display){
     }
 }
 
+/*jump to an element*/
 function jump(element){  
     jump_after = element
     var get = document.getElementById(element);  
     document.getElementById("Content_Container").scrollTo(0,get.offsetTop);
 } 
 
+/*jump to integer position on page*/
 function jump_int(integer){
     document.getElementById("Content_Container").scrollTo(0,integer); 
 }
 
+/*jump to the top*/
 function jump_top(){
     document.getElementById("Content_Container").scroll(0,0);
     history.replaceState({"title":current_hash, 
@@ -82,24 +93,43 @@ function jump_top(){
     ''); 
 }
 
+/*operation to determine what hash is in url*/
 function go_hash(){
     var pound=location.hash;
-    if(pound.length != ""){
-        show_content(pound.substring(1))
+    const split = pound.split("#")
+
+    if(split.length > 2){
+        project_go_to = split[2] //save
+        location.hash = split[1] //go to
+    }
+    else if(pound != "" && split[1].length != ""){
+        show_content(split[1])
     }
     else{
         switch_content("Home")
     }
     document.body.addEventListener("click", close_nav);
-    if(jump_after_int != 0){
+
+    if(project_go_to != null){
+        console.log(project_go_to)
+        jump(project_go_to)
+        project_go_to = null    //reset
+        jump_after_int = 0
+    }
+    else if(jump_after_int != 0){
+        console.log("jump", jump_after_int)
         jump_int(jump_after_int)
         jump_after_int = 0
     }
+
     if(history.state != null){
+        console.log("here")
         jump_int(history.state["scroll"])
     }
 }
 
+
+/*get scroll position*/
 function get_scroll(){
     scroll_by = document.getElementById("Content_Container").scrollTop
     if(top_hidden && scroll_by > 50){
@@ -116,13 +146,17 @@ function get_scroll(){
     "scroll": scroll_by},
     '');
 }
+
+
 function hide_resume(){
     document.getElementById("resume_container_edge").style.visibility = "hidden"
 }
+
 function show_resume(){
     document.getElementById("resume_container_edge").style.visibility= "visible"
 }
 
+/*history manipulation*/
 window.onpopstate = function() {
     if(!content){
         switch(location.hash) {
