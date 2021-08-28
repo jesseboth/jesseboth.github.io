@@ -197,6 +197,7 @@
           <span class="jumpto" onclick='jump("GameOfLife")'>Game of Life</span>
           <span class="jumpto" onclick='jump("Watch")'>Watch</span>
           <span class="jumpto" onclick='jump("AutoHotKey")'>AutoHotKey</span>
+          <span class="jumpto" onclick='jump("x86")'>x86 Assembly</span>
           <span class="jumpto" onclick='jump("ChromeExtension")'>Chrome Extension</span>
           <span class="jumpto" onclick='jump("VScode")'>VS code</span>
         </div>
@@ -364,6 +365,43 @@
         <div class="center_img" style="width: 150px;">
           <img src="images/music_vol.png" alt="music">
         </div>
+
+
+        <div class="break"></div>
+        <h2 id="x86">x86 Assembly</h2>
+        I took some time to learn the basics of x86 assembly.  The approach I took was to use the
+        nasm assembler.  This approach gave me access to the OS syscalls as apposed to my 
+        <a class="link" onclick="switch_content('Education'); jump('Microprocessors')">project</a>
+        that was done in my Microprocessors course which had no OS.
+        <br><br>
+        Before I was able to start this project I set up an Ubuntu Server VM with Virtual Box which I 
+        run in headless mode. This allows me to ssh into the vm with the vscode extension Remote-SSH.
+        I am able to write all my code and run it with the built in terminal as if I was wasn't working 
+        off of a vm.
+        <br><br>
+        I started to learn the syntax by writing some useful subroutines that can be used for debugging such as:
+        print_string, int_to_string, print_hex (which can print the value in a register) and a memory dump.  The 
+        memory dump routine is particularly useful because it shows all the current values in memory given a starting
+        address and size and it prints out as if I was using an IDE. This code can be found at 
+        <a class="link" href="https://github.com/jesseboth/C_Library/blob/master/asm/lib.s">ASM Library</a>
+        <br><br>
+        After I built these debugging tools, I wanted to try to implement the game of life.  I chose this because it
+        was something I was familiar with, but also requires a bit of memory management. That code can be found at
+        <a class="link" href="https://github.com/jesseboth/C_Library/blob/master/asm/life.s">ASM GOL</a>
+        <br><br>
+
+        <div class="scroll_container">
+          <div class="scroll_button"></div>
+          <div class="scrollimg_container">
+            <div class="scrollimg">
+              <img class="content_image" src="images/asm_gosper.png" alt="x86asm">
+              <img class="content_image" src="images/asm_mem_dump.png" alt="x86asm">
+            </div>
+          </div>
+          <div class="scroll_button"></div>
+        </div>
+
+
 
         <div class="break"></div>
         <h2 id="ChromeExtension">Chrome Extension</h2>
