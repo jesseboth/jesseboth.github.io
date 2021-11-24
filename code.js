@@ -19,6 +19,7 @@ current_hash = ""       //current content page
 top_hidden = true       //top button hidden
 top_visible = false     //top button visible
 project_go_to = null    //jump to from url
+scroll_by = 0
 
 
 /*open side nav*/
