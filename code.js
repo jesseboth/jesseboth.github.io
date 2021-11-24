@@ -4,7 +4,7 @@ window.onhashchange = go_hash
 /*start up function*/
 function run(){ 
  go_hash()
- setInterval(get_scroll, 200)
+ setInterval(get_scroll, 1000)
 }
 
 
@@ -170,4 +170,18 @@ window.onpopstate = function() {
         
     }
     content = false
+}
+
+submitted = false;
+function submit_form(){
+    document.getElementById("contact").style = "display:none;"   
+    document.getElementsByClassName("form-submitted")[0].style = "display:block;"            
+}
+function return_form(){
+      document.getElementById("contact").style = "display:none;"        
+}
+function show_form(){
+    if(!submitted){
+        document.getElementById("contact").style = "display:block;"            
+    }
 }
