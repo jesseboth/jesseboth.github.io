@@ -4,7 +4,7 @@ window.onhashchange = go_hash
 /*start up function*/
 function run(){ 
  go_hash()
- setInterval(get_scroll, 1000)
+ setInterval(get_scroll, 200)
 }
 
 
@@ -49,6 +49,10 @@ function close_nav(){
 
 /*change what content page is visible*/
 function switch_content(content_display){
+    history.replaceState({"title":current_hash, 
+    "scroll": scroll_by},
+    '');
+
     content = true
 
     location.hash = content_display
@@ -139,9 +143,6 @@ function get_scroll(){
         top_hidden = true
         top_visible = false
     }
-    history.replaceState({"title":current_hash, 
-    "scroll": scroll_by},
-    '');
 }
 
 
