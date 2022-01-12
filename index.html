@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <link rel="icon" type="image/x-icon" href="images/code_icon.png">
@@ -60,12 +61,12 @@
         </div>
         <div class="text">
           I am currently pursing a degree in Computer Engineering at the University at Buffalo. I have had an interest
-          in programming and hardware since I was little.  I am pursuing computer engineering to further my
+          in programming and hardware since I was little. I am pursuing computer engineering to further my
           knowledge about how the technology that surrounds us works.
 
           <br>
           <br>
-          You can see some of the projects that I have done in class and more about my education 
+          You can see some of the projects that I have done in class and more about my education
           in the <a class="link" onclick="switch_content('Education')">Education</a> section.
           <br>
           <br>
@@ -75,41 +76,51 @@
 
           <br>
           <br>
-          You can see some of my non technical hobbies and interests in my 
+          You can see some of my non technical hobbies and interests in my
           <a class="link" onclick="switch_content('AboutMe')">About Me</a>.
 
         </div>
         <center>
           <div id="resume_container_edge">
-            <a download class="download_resume jumpto intro_link" href="images/Jesse_Both_Resume.pdf" download="images/Jesse_Both_Resume.pdf">Download</a>
+            <a download class="download_resume jumpto intro_link" href="images/Jesse_Both_Resume.pdf"
+              download="images/Jesse_Both_Resume.pdf">Download</a>
             <div class="hide" onclick="hide_resume()"></div>
             <div id="resume_container">
               <div class="resume_cont">
-              <img id="resume" src="images/Jesse_Both_Resume.png" alt="resume"></div>
+                <img id="resume" src="images/Jesse_Both_Resume.png" alt="resume">
+              </div>
             </div>
-      </center>
+        </center>
 
-      <div class="contact" id="contact" style="display: none;">
-        <div class="contact-form-container">  
-          <form class="contact-form" name="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLScRtcuOJikwZ6QL5gnmmChiw0mWIf1tpJnCyDHx6vZF_8VFXQ/formResponse?" id="contact-form" target="hidden_iframe" onsubmit="submitted=true; submit_form();">
-              <input type="text" name="entry.1990348581" id="entry.1990348581" class="form-control name" placeholder="Name" required="" autofill="name">
-              <input type="text" name="entry.1034360198" id="entry.1034360198" class="form-control" placeholder="Subject" required="" autofill="off">
-              <input type="text" name="entry.2034241981" id="entry.2034241981" class="form-control" placeholder="Email" required="" autofill="Email">
-              <textarea name="entry.1804513699" id="entry.1804513699" class="form-control" placeholder="Message" cols="30" rows="10" required=""></textarea>
+        <div class="contact" id="contact" style="display: none;">
+          <div class="contact-form-container">
+            <form class="contact-form" name="contact-form"
+              action="https://docs.google.com/forms/d/e/1FAIpQLScRtcuOJikwZ6QL5gnmmChiw0mWIf1tpJnCyDHx6vZF_8VFXQ/formResponse?"
+              id="contact-form" target="hidden_iframe" onsubmit="submitted=true; submit_form();">
+              <input type="text" name="entry.1990348581" id="entry.1990348581" class="form-control name"
+                placeholder="Name" required="" autofill="name">
+              <input type="text" name="entry.1034360198" id="entry.1034360198" class="form-control"
+                placeholder="Subject" required="" autofill="off">
+              <input type="text" name="entry.2034241981" id="entry.2034241981" class="form-control" placeholder="Email"
+                required="" autofill="Email">
+              <textarea name="entry.1804513699" id="entry.1804513699" class="form-control" placeholder="Message"
+                cols="30" rows="10" required=""></textarea>
               <input type="submit" name="submit" class="form-control submit" value="Send">
               <input type="button" name="return" class="return" onclick="return_form();" value="">
-          </form>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+            </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+          </div>
         </div>
-      </div>
 
       </div>
 
       <div id="-Education" class="not_Content">
         <div class="jumpto_container">
+          <span class="jumpto" onclick='jump("EmbeddedSystems")'>Embedded Systems</span>
+          <span class="jumpto" onclick='jump("Microprocessors")'>Microprocessors</span>
+          <span class="jumpto" onclick='jump("ComputationalIntelligence")'>Computational Intelligence</span>
           <span class="jumpto" onclick='jump("SystemsProgramming")'>Systems Programming</span>
           <span class="jumpto" onclick='jump("ComputerOrganization")'>Computer Organization</span>
-          <span class="jumpto" onclick='jump("Microprocessors")'>Microprocessors</span>
           <span class="jumpto" onclick='jump("Math")'>Math/Physics</span>
         </div>
         <h1>Education</h1>
@@ -120,93 +131,155 @@
         low level programming and microprocessors.
         <div class="break"></div>
 
-        <h2 id="SystemsProgramming">Systems Programming</h2>
-          This class had many labs and projects that were programmed in C.
-          Prior to this class, programming was not coming easy to me, but this 
-          is where it all started to click for me.  In this class, I learned
-          memory manipulation, and pointer math. These skills have vastly helped
-          me program in assembly, because memory manipulation is so important.
-          Unfortunately I am unable to 
-          share some of the code that was produced as a part of this class, due to UB's
-          strict academic violation policy, but I can share what was done.
-          <br>
-          <br>
-          One of the major projects that was included in this class was one where 
-          I had to develop an implementation of the C functions: malloc(), calloc(), realloc(), and 
-          free(). In order to create this implementation, sbrk() was used in order to create a chunk
-          of memory that was accessible.  I then used a linked list that stored valid memory
-          addresses that were 4 bytes apart.  malloc, pulled the required amount of memory off 
-          the linked list, and free put memory back onto the linked list.  While this, is 
-          an over simplified version of what complexities were involved in this program, 
-          this project boosted my confidence significantly as a developer. 
-          <div class="break"></div>
+        <h2 id="EmbeddedSystems">Embedded Systems</h2>
+        For this class a Nucleo-144 was used.
+        I implemented 2 major projects, a timer system and what I called
+        an "Alternative Hearing Device".
+        <br>
+        The timer project used a 4x4 keypad to control the timer and a 16x2 LCD
+        to display the time and prompts.  A string of number inputs were input and
+        parsed to be converted into minutes and seconds so that the time could be
+        decremented via a timer interrupt every second.  I wrote the code with the 
+        intention of allowing the time to go beyond 9:59, but due to the restrictions
+        of the project description it is currently set to not go past the ten minute
+        mark.
+        <br>
+        The "Alternative Hearing Device" used a series of sound transducers to
+        collect sound at different levels and displayed the sound level on
+        the LCD as well as provided physical feedback via a vibration motor. A
+        rotary encoder was used to adjust the intensity of the vibration motor.
+        There are things for this project that I would have liked to do differently,
+        but I was restricted to the scope of the class.
 
-        <h2 id="ComputerOrganization">Computer Organization</h2>
-          This class involved my introduction to assembly, but specifically MIPS assembly
-          was used.  The main part of this class, was to learn how a computer actually
-          works.  I learned how languages like C are compiled into assembly and how that
-          assembly goes through the assembly to be converted to machine code. In the fall
-          of '21 I will be a TA for this class.
-          <br>
-          <br>
-          The major project that this class had was to take a list of x,y coordinates 
-          and sort the coordinates by Euclidean distance in MIPS assembly.  The sort 
-          algorithm that I used was essentially selection sort.  One thing that I enjoyed
-          in this project that was not a requirement was finding a way to print that data
-          to the terminal screen in an organized manner.  obviously testing is not easy 
-          when it comes to programming in assembly and this subroutine to print the data
-          vastly helped with my success on this project.  The code for this project can be
-          seen here: 
-          <a class="link" href="https://github.com/jesseboth/Least-Euclidean-Distance/tree/master/Project/">Least Euclidean Distance</a>
-          <div class="break"></div>
+        <div class="scroll_container">
+          <div class="scroll_button"></div>
+          <div class="scrollimg_container">
+            <div class="scrollimg">
+              <img class="content_image" src="images/embed_p3.png" alt="embed">
+              <img class="content_image" src="images/embed_p2.png" alt="embed">
+            </div>
+          </div>
+          <div class="scroll_button"></div>
+        </div>
+
+        <div class="break"></div>
 
         <h2 id="Microprocessors">Microprocessors</h2>
-          This course has been my favorite class that I have taken so far.
-          This course utilizes the Tiva C processor model EK-TM4C123GXL. All the programming
-          in this class has been done in ARM assembly.  I have learned how to utilize GPIO from the 
-          microprocessor as well as UART control. 
-          <br>
-          <br>
-          I implemented a version of the game "FlowFree".
-          This project is using everything that I have learned throughout the class. I am used ANSI
-          escape sequences to provide color to the game and several custom made data structures in order
-          to track positions of the links and cursor movement.  One of my favorite aspects of 
-          programming in assembly is pointer math (which I also enjoyed when programming in C).
-          I find being able to manipulate raw memory very rewarding. The repository can be seen
-          here (asm is in lab6 folder): 
-          <a class="link" href="https://github.com/jesseboth/FlowFree">FlowFree</a>
-          <div class="scroll_container">
-            <div class="scroll_button"></div>
-            <div class="scrollimg_container">
-              <div class="scrollimg">
-                <img class="content_image" src="images/micro_title.png" alt="micro">
-                <img class="content_image" src="images/micro_new_game.png" alt="mirco">
-                <img class="content_image" src="images/micro_with_stuff.png" alt="micro">
-                <img class="content_image" src="images/micro_pause.png" alt="micro">
-                <img class="content_image" src="images/micro_end.png" alt="micro">
+        This course has been my favorite class that I have taken so far.
+        This course utilizes the Tiva C processor model EK-TM4C123GPM which uses an
+        ARM Cortex-M4 Processor. All the programming
+        in this class has been done in ARM assembly. I have learned how to utilize GPIO from the
+        microprocessor at a 'bare-metal' level by using bitwise control. Interrupts via GPIO buttons
+        and the clock were used and initialized using bitwise control.
+        <br>
+        <br>
+        I implemented a version of the game "FlowFree".
+        This project is using everything that I have learned throughout the class. I am used ANSI
+        escape sequences to provide color to the game and several custom made data structures in order
+        to track positions of the links and cursor movement. One of my favorite aspects of
+        programming in assembly is pointer math (which I also enjoyed when programming in C).
+        I find being able to manipulate raw memory very rewarding. The repository can be seen
+        here (asm is in lab6 folder):
+        <a class="link" href="https://github.com/jesseboth/FlowFree">FlowFree</a>
+        <div class="scroll_container">
+          <div class="scroll_button"></div>
+          <div class="scrollimg_container">
+            <div class="scrollimg">
+              <img class="content_image" src="images/micro_title.png" alt="micro">
+              <img class="content_image" src="images/micro_new_game.png" alt="mirco">
+              <img class="content_image" src="images/micro_with_stuff.png" alt="micro">
+              <img class="content_image" src="images/micro_pause.png" alt="micro">
+              <img class="content_image" src="images/micro_end.png" alt="micro">
 
-              </div>
             </div>
-            <div class="scroll_button"></div>
           </div>
+          <div class="scroll_button"></div>
+        </div>
 
-          <div class="break"></div>
+        <div class="break"></div>
+
+        <h2 id="ComputationalIntelligence">Computational Intelligence</h2>
+        In this class, I learned about how computational intelligence techniques can
+        be used in the context of hardware. There were 4 major projects for this class
+        which included: Fuzzy Controller, Time Series, Microgrid Controller, and a written
+        paper to summarize a IEEE technical paper. All the coding projects were completed
+        in MATLAB.
+        <br>
+        <br>
+        The time series project was an implementation of representation techniques over time
+        and how to classify classes into specific groups with a reduction in the number of
+        dimensions used. The representation techniques used were PAA and SAX and the
+        classification types were Euclidean and Manhattan. Project on Github:
+        <a class="link" href="https://github.com/jesseboth/Time-Series">Time Series</a>
+        <br>
+        <br>
+        The project that I enjoyed the most in this class was the Microgrid project.
+        This project used a Genetic Algorithm to predict the best power output from 4
+        varying sources. The GA used 2 survival techniques: elitism and random selection
+        as well as 2 reproduction techniques: mutation and crossover. More information
+        on the implementation can be seen here:
+        <a class="link" href="https://github.com/jesseboth/Microgrid/blob/main/worksheet.pdf">Implementation</a>.
+        <br>
+        The project on Github:
+        <a class="link" href="https://github.com/jesseboth/Microgrid">Microgrid</a>
+        <div class="break"></div>
+
+        <h2 id="SystemsProgramming">Systems Programming</h2>
+        This class had many labs and projects that were programmed in C.
+        Prior to this class, programming was not coming easy to me, but this
+        is where it all started to click for me. In this class, I learned
+        memory manipulation, and pointer math. These skills have vastly helped
+        me program in assembly, because memory manipulation is so important.
+        Unfortunately I am unable to
+        share some of the code that was produced as a part of this class, due to UB's
+        strict academic violation policy, but I can share what was done.
+        <br>
+        <br>
+        One of the major projects that was included in this class was one where
+        I had to develop an implementation of the C functions: malloc(), calloc(), realloc(), and
+        free(). In order to create this implementation, sbrk() was used in order to create a chunk
+        of memory that was accessible. I then used a linked list that stored valid memory
+        addresses that were 4 bytes apart. malloc, pulled the required amount of memory off
+        the linked list, and free put memory back onto the linked list. While this, is
+        an over simplified version of what complexities were involved in this program,
+        this project boosted my confidence significantly as a developer.
+        <div class="break"></div>
+
+        <h2 id="ComputerOrganization">Computer Organization</h2>
+        This class involved my introduction to assembly, but specifically MIPS assembly
+        was used. The main part of this class, was to learn how a computer actually
+        works. The CPU data path was an important aspect of the class.
+        I learned how languages like C are compiled into assembly and how that
+        assembly is converted to machine code. In the fall of '21 I was a TA for this class.
+        <br>
+        <br>
+        The major project that this class had was to take a list of x,y coordinates
+        and sort the coordinates by Euclidean distance in MIPS assembly. The sort
+        algorithm that I used was essentially selection sort. One thing that I enjoyed
+        in this project that was not a requirement was finding a way to print that data
+        to the terminal screen in an organized manner. obviously testing is not easy
+        when it comes to programming in assembly and this subroutine to print the data
+        vastly helped with my success on this project. The code for this project can be
+        seen here:
+        <a class="link" href="https://github.com/jesseboth/Least-Euclidean-Distance/tree/master/Project/">Least
+          Euclidean Distance</a>
+        <div class="break"></div>
 
         <h2 id="Math">Math/Physics</h2>
         Throughout my college career I was required to take several math and physics courses.
         The courses include:
         <br>
-         - Calculus I, II, III
+        - Calculus I, II, III
         <br>
-         - Discrete Math
+        - Discrete Math
         <br>
-         - Probability and Statistics
+        - Probability and Statistics
         <br>
-         - Differential Equations
+        - Differential Equations
         <br>
-         - Linear Algebra
+        - Linear Algebra
         <br>
-         - Physics I, II
+        - Physics I, II
 
       </div>
 
@@ -214,6 +287,7 @@
         <div class="jumpto_container">
           <span class="jumpto" onclick='jump("Calendar")'>Calendar</span>
           <span class="jumpto" onclick='jump("3Dprint")'>3D Printing</span>
+          <span class="jumpto" onclick='jump("2048")'>2048</span>
           <span class="jumpto" onclick='jump("GameOfLife")'>Game of Life</span>
           <span class="jumpto" onclick='jump("Watch")'>Watch</span>
           <span class="jumpto" onclick='jump("AutoHotKey")'>AutoHotKey</span>
@@ -222,55 +296,54 @@
           <span class="jumpto" onclick='jump("VScode")'>VS code</span>
         </div>
         <h1>Projects</h1>
-        I have worked on many different projects, but the ones
-        I tend to stick with are the ones that have a practical purpose.
-        I find it boring to work on a project that has no practical use, and
-        find that I become more invested if the project has a real purpose.
+        I have worked on many projects, and really enjoy programming in my free time. The
+        only way to get better at something is through practice and programming is no exception
+        to this rule.
         <div class="break"></div>
 
         <h2 id="Calendar">Calendar</h2>
-          This project started as a simple new tab page. I didn't like the way that
-          chromes dark mode new tab looked, so I thought that I could do it better.
-          This started out by having the search bar and the icons on the top right of
-          the screen and it evolved from there.
-          <br>
-          <br>
-          I began this project a couple weeks before Covid 19 caused everything to 
-          go online.  I had the idea to incorporate my calendar into this new tab shortly
-          before this had happened.  During this time I had been in a data structures
-          class, so it was the perfect time to take on this type of project and it 
-          is also the reason I chose to use Scala.  I knew there
-          were ways that I could download the ical file automatically, it was just a matter
-          of parsing the file.  This code has undergone several ground up rebuilds and at this 
-          moment I would say it is perfect for my use case.
-          <br>
-          <br>
-          One of the main parts of this calendar were that I wanted to have the location
-          displayed on the new tab page.  After this implementation and after 
-          moving to online, I realized that I could place my class meeting links in the 
-          location field. After some regex to place the main site location as the name
-          to be display, I know had a way to enter my lectures without having to search
-          for a link for a specific class. To this day I have yet to miss an online lecture.
-          <br>
-          <br>
-          When the semester ended I had the idea to make a full blown calendar using the same
-          parsing code that I used for the new tab.  Now, making a simple calendar that was
-          placed in a simple html grid would have been easy, but I wanted the ability to have
-          user input.  I developed a way that I could click on a specific day and that days events
-          would appear on the left of the calendar. I also included time indicators on each event.
-          When an event is approaching it turns cyan and when it is current it turns red.  There are
-          a few other options that can manipulate this feature, like it flashes red if exam is in the
-          description and it is currently an active event.
-          <br>
-          <br>
-          After the calendar was designed I purchased a raspberry pi that now sits in my room
-          and displays my calendar all day with the help of some bash files to initiate parsing
-          every thirty minutes and to power off the display at night.
-          <br>
-          <br>
-          There was a lot of thought that went into the design and implementation of this project. 
-          You can see the code for this project here:
-          <a class="link" href="https://github.com/jesseboth/Calendar/tree/master/src/main">Calendar</a>
+        This project started as a simple new tab page. I didn't like the way that
+        chromes dark mode new tab looked, so I thought that I could do it better.
+        This started out by having the search bar and the icons on the top right of
+        the screen and it evolved from there.
+        <br>
+        <br>
+        I began this project a couple weeks before Covid 19 caused everything to
+        go online. I had the idea to incorporate my calendar into this new tab shortly
+        before this had happened. During this time I had been in a data structures
+        class, so it was the perfect time to take on this type of project and it
+        is also the reason I chose to use Scala. I knew there
+        were ways that I could download the ical file automatically, it was just a matter
+        of parsing the file. This code has undergone several ground up rebuilds and at this
+        moment I would say it is perfect for my use case.
+        <br>
+        <br>
+        One of the main parts of this calendar were that I wanted to have the location
+        displayed on the new tab page. After this implementation and after
+        moving to online, I realized that I could place my class meeting links in the
+        location field. After some regex to place the main site location as the name
+        to be display, I know had a way to enter my lectures without having to search
+        for a link for a specific class. To this day I have yet to miss an online lecture.
+        <br>
+        <br>
+        When the semester ended I had the idea to make a full blown calendar using the same
+        parsing code that I used for the new tab. Now, making a simple calendar that was
+        placed in a simple html grid would have been easy, but I wanted the ability to have
+        user input. I developed a way that I could click on a specific day and that days events
+        would appear on the left of the calendar. I also included time indicators on each event.
+        When an event is approaching it turns cyan and when it is current it turns red. There are
+        a few other options that can manipulate this feature, like it flashes red if exam is in the
+        description and it is currently an active event.
+        <br>
+        <br>
+        After the calendar was designed I purchased a raspberry pi that now sits in my room
+        and displays my calendar all day with the help of some bash files to initiate parsing
+        every thirty minutes and to power off the display at night.
+        <br>
+        <br>
+        There was a lot of thought that went into the design and implementation of this project.
+        You can see the code for this project here:
+        <a class="link" href="https://github.com/jesseboth/Calendar/tree/master/src/main">Calendar</a>
 
         <div class="scroll_container">
           <div class="scroll_button"></div>
@@ -286,50 +359,70 @@
           </div>
           <div class="scroll_button"></div>
         </div>
-        
+
         <div class="break"></div>
         <h2 id="3Dprint">3D Printing</h2>
-          I really wanted to get more into 3D modeling, but didn't have
-          a true reason to start.  After I got my 3D printer I have worked on 
-          many small projects that have given me a basic understanding of how 
-          modeling works.  Most of the modeling that I have done has been editing 
-          a model that has already been made by someone else.  This has helped me 
-          understand how other people take on the design process to tackle a project 
-          of my own from scratch. 
-          <br>
-          <br>
-          One design that I am particularly proud of is a laptop stand that I designed 
-          to lift my laptop to a more ergonomic position.  While the design has some room
-          for improvement, I have found it very useful and I use it everyday.
-          <div class="scroll_container">
-            <div class="scroll_button"></div>
-            <div class="scrollimg_container">
-              <div class="scrollimg">
-                <img class="content_image" src="images/desk.jpg" alt="laptop">
-                <img class="content_image" src="images/laptop_stand.png" alt="laptop">
-                <img class="content_image" src="images/laptop_stand_side.png" alt="laptop">
-                <img class="content_image" src="images/life_stand.jpg" alt="laptop">
-              </div>
+        I really wanted to get more into 3D modeling, but didn't have
+        a true reason to start. After I got my 3D printer I have worked on
+        many small projects that have given me a basic understanding of how
+        modeling works. Most of the modeling that I have done has been editing
+        a model that has already been made by someone else. This has helped me
+        understand how other people take on the design process to tackle a project
+        of my own from scratch.
+        <br>
+        <br>
+        One design that I am particularly proud of is a laptop stand that I designed
+        to lift my laptop to a more ergonomic position. While the design has some room
+        for improvement, I have found it very useful and I use it everyday.
+        <div class="scroll_container">
+          <div class="scroll_button"></div>
+          <div class="scrollimg_container">
+            <div class="scrollimg">
+              <img class="content_image" src="images/desk.jpg" alt="laptop">
+              <img class="content_image" src="images/laptop_stand.png" alt="laptop">
+              <img class="content_image" src="images/laptop_stand_side.png" alt="laptop">
+              <img class="content_image" src="images/life_stand.jpg" alt="laptop">
             </div>
-            <div class="scroll_button"></div>
           </div>
+          <div class="scroll_button"></div>
+        </div>
+
+        <div class="break"></div>
+        <h2 id="2048">2048</h2>
+        This project was created with the same microcontroller as used in my 
+        <a class="link" href="https://jesseboth.github.io/#Education#Microprocessors">Microprocessors</a>
+        class with the addition of the EduBase.  When writing code for this microcontroller,
+        there are not any preexisting libraries, so everything has to be written from scratch (LCD code
+        was adapted from external source).  All interrupts and GPIO configurations had to be done via 
+        bitwise control of the necessary registers.  There is more information about the project implementation
+        on <a class="link" href="https://github.com/jesseboth/2048">Github</a>.
+        <div class="scroll_container">
+          <div class="scroll_button"></div>
+          <div class="scrollimg_container">
+            <div class="scrollimg">
+              <img class="content_image" src="images/2048.png" alt="2048">
+              <img class="content_image" src="images/eduboard.jpg" alt="2048">
+            </div>
+          </div>
+          <div class="scroll_button"></div>
+        </div>
 
         <div class="break"></div>
         <h2 id="GameOfLife">Game of Life</h2>
         Originally I had this project as a homework assignment in my systems programming
-        course.  I did this as a quick weekend project to see what could be done in just
-        a few days.  There are many things about this project that I would do very 
+        course. I did this as a quick weekend project to see what could be done in just
+        a few days. There are many things about this project that I would do very
         differently today, but I also learned a lot while working on this project.
         <br>
         <br>
         One of my major project requirements was that the used had to be able to click
-        on any of the squares to test there own design on the algorithm.  This was important
+        on any of the squares to test there own design on the algorithm. This was important
         to me because the algorithm in itself is quite simple, I needed something to make
-        this last a weekend. As I said before, if I did this project again I would do it very 
-        differently.  The code if far from efficient, but I also didn't want to break the spirit
+        this last a weekend. As I said before, if I did this project again I would do it very
+        differently. The code if far from efficient, but I also didn't want to break the spirit
         of the original idea to see what could be done in a weekend and change it now.
-        <br> 
-        The code for this project can be found here: 
+        <br>
+        The code for this project can be found here:
         <a class="link" href="https://github.com/jesseboth/Game-of-Life">Game of Life</a>
 
         <div class="scroll_container">
@@ -343,14 +436,14 @@
           </div>
           <div class="scroll_button"></div>
         </div>
-        
+
         <div class="break"></div>
         <h2 id="Watch">Watch</h2>
         I started making watch faces in High School using an app called Watchmaker.
-        This app allowed for easy design while also allowing for scripting using Lua. 
-        This was some of the first programming that I had ever done.  
+        This app allowed for easy design while also allowing for scripting using Lua.
+        This was some of the first programming that I had ever done.
         <br>
-        At the moment I am trying to rebuild this same watch face natively for 
+        At the moment I am trying to rebuild this same watch face natively for
         a Samsung watch in C.
 
         <div class="scroll_container">
@@ -370,17 +463,17 @@
         <div class="break"></div>
         <h2 id="AutoHotKey">AutoHotKey</h2>
         One thing that I enjoy is creating programs that make programming and working
-        on a computer in general more efficient.  I do that with AutoHotkey.  I have made
-        several custom key bindings and GUIs to make my workflow easier.  Being a programmer
+        on a computer in general more efficient. I do that with AutoHotkey. I have made
+        several custom key bindings and GUIs to make my workflow easier. Being a programmer
         there are many shortcuts that text editors have that the operating system does not.
         I use AutoHotkey to mimic some of these shortcuts.
         <br>
         <br>
-        I also have some experience making guis with AutoHotkey.  One GUI that I have made 
-        is to display my music volume when it is increased or decreased.  This was necessary
-        because originally I just make a key binding to adjust my music volume, but I had no 
-        visual reference for how high or low it was.  I designed the GUI to look exactly like 
-        the windows volume in the top left corner, but instead of a white block it has a green 
+        I also have some experience making guis with AutoHotkey. One GUI that I have made
+        is to display my music volume when it is increased or decreased. This was necessary
+        because originally I just make a key binding to adjust my music volume, but I had no
+        visual reference for how high or low it was. I designed the GUI to look exactly like
+        the windows volume in the top left corner, but instead of a white block it has a green
         one.
         <div class="center_img" style="width: 150px;">
           <img src="images/music_vol.png" alt="music">
@@ -389,23 +482,23 @@
 
         <div class="break"></div>
         <h2 id="x86">x86 Assembly</h2>
-        I took some time to learn the basics of x86 assembly.  The approach I took was to use the
-        nasm assembler.  This approach gave me access to the OS syscalls as apposed to my 
+        I took some time to learn the basics of x86 assembly. The approach I took was to use the
+        nasm assembler. This approach gave me access to the OS syscalls as apposed to my
         <a class="link" onclick="switch_content('Education'); jump('Microprocessors')">project</a>
         that was done in my Microprocessors course which had no OS.
         <br><br>
-        Before I was able to start this project I set up an Ubuntu Server VM with Virtual Box which I 
+        Before I was able to start this project I set up an Ubuntu Server VM with Virtual Box which I
         run in headless mode. This allows me to ssh into the VM with the VScode extension Remote-SSH.
-        I am able to write all my code and run it with the built in terminal as if I was wasn't working 
+        I am able to write all my code and run it with the built in terminal as if I was wasn't working
         off of a VM.
         <br><br>
         I started to learn the syntax by writing some useful subroutines that can be used for debugging such as:
-        print_string, int_to_string, print_hex (which can print the value in a register) and a memory dump.  The 
+        print_string, int_to_string, print_hex (which can print the value in a register) and a memory dump. The
         memory dump routine is particularly useful because it shows all the current values in memory given a starting
-        address and size and it prints out as if I was using an IDE. This code can be found at 
+        address and size and it prints out as if I was using an IDE. This code can be found at
         <a class="link" href="https://github.com/jesseboth/C_Library/blob/master/asm/lib.s">ASM Library</a>
         <br><br>
-        After I built these debugging tools, I wanted to try to implement the game of life.  I chose this because it
+        After I built these debugging tools, I wanted to try to implement the game of life. I chose this because it
         was something I was familiar with, but also requires a bit of memory management. That code can be found at
         <a class="link" href="https://github.com/jesseboth/C_Library/blob/master/asm/life.s">ASM GOL</a>
         <br><br>
@@ -425,7 +518,7 @@
 
         <div class="break"></div>
         <h2 id="ChromeExtension">Chrome Extension</h2>
-        This is a basic chrome extension that I made.  Its purpose is to provide
+        This is a basic chrome extension that I made. Its purpose is to provide
         easier access to streaming websites when my laptop is in tablet mode.
         While I am working, I often like to have something playing in the background.
         This may slightly decrease my productivity, but I have found that I get frustrated
@@ -438,8 +531,8 @@
         <h2 id="VScode">VS code</h2>
         This isn't necessarily a project per se, but I believe in efficient programming.
         An hour spent to adjust a text editor for efficiency can be several hours saved
-        in the future.  I have taken my time to get truly comfortable with vs code that 
-        it is now my go to.  Sure, it isn't as light weight as emacs or vim, but it also 
+        in the future. I have taken my time to get truly comfortable with vs code that
+        it is now my go to. Sure, it isn't as light weight as emacs or vim, but it also
         opens much quicker than some other IDE's that are available.
       </div>
 
@@ -450,42 +543,42 @@
         </div>
         <h1>About Me</h1>
         While a large part of my life is done working with computers
-        I do have many things that I enjoy to do when I am not sitting 
+        I do have many things that I enjoy to do when I am not sitting
         In front of my computer.
 
         <h2 id="Hobbies">Hobbies</h2>
         <h4>Skiing</h4>
-        One of my favorite things to do in the winter is ski.  I have been skiing
-        since I was about 4 years old and I have loved it ever since. I raced for 
-        a little while when I was in middle and high school and even went to the state 
+        One of my favorite things to do in the winter is ski. I have been skiing
+        since I was about 4 years old and I have loved it ever since. I raced for
+        a little while when I was in middle and high school and even went to the state
         championship a couple times.
 
         <br>
         <br>
         <h4>Electric Skateboarding</h4>
-        When it is too warm to ski, I enjoy electric skateboarding.  It gives me the 
-        same adrenalin rush that skiing gives me, but I can do it when it is warm.  It
+        When it is too warm to ski, I enjoy electric skateboarding. It gives me the
+        same adrenalin rush that skiing gives me, but I can do it when it is warm. It
         is a lot of fun to some smooth pavement and carve around at full speed.
 
         <br>
         <br>
         <h4>Cooking</h4>
-        Something that calms me down after a stressful day is cooking.  At one point
+        Something that calms me down after a stressful day is cooking. At one point
         imposter syndrome was hitting me pretty hard and I was considering going to culinary
         school.
 
 
         <h2 id="Interests">Interests</h2>
         <h4>Technology</h4>
-        I am really interested in technology.  I love hearing about the newest best device
+        I am really interested in technology. I love hearing about the newest best device
         that is just coming out and watching review about them. I enjoy talking to people
-        about what is new and what is good and bad about the devices. This was one of the 
+        about what is new and what is good and bad about the devices. This was one of the
         big influences for getting into Computer Engineering
         <br>
-        <br>  
+        <br>
         <h4>Cars</h4>
-        Another thing that I am really interested in is cars.  While it may only ever
-        be a dream of mine to be able to own a two hundred thousand dollar car, I still 
+        Another thing that I am really interested in is cars. While it may only ever
+        be a dream of mine to be able to own a two hundred thousand dollar car, I still
         really enjoy admiring them.
 
 
@@ -499,5 +592,5 @@
   </div>
 
 </body>
-</html>
 
+</html>
