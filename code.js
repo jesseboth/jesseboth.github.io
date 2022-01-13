@@ -4,6 +4,7 @@ window.onhashchange = go_hash
 /*start up function*/
 function run(){ 
  go_hash()
+ submit_visitor()
  setInterval(get_scroll, 200)
 }
 
@@ -185,5 +186,13 @@ function return_form(){
 function show_form(){
     if(!submitted){
         document.getElementById("contact").style = "display:block;"            
+    }
+}
+
+function submit_visitor(){
+    console.log("here")
+    if(history.state == null){
+        document.getElementById("entry.1970061792").value = Date();
+        document.getElementById("visitor-form").submit();
     }
 }

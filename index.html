@@ -112,6 +112,15 @@
           </div>
         </div>
 
+        <div class="visitors" id="visit" style="display:none;">
+            <form class="visitor-form" name="visitor-form"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSf9RaInC7JExlvQuii-wznxWZkfgohekcItxfUkhkNDzbdjQw/formResponse?"
+              id="visitor-form" target="visitor_iframe" onsubmit="visit=true;">
+              <input type="text" name="entry.1970061792" id="entry.1970061792" class="visitor-control"
+                placeholder="" required="" autofill="name">
+            </form>
+            <iframe name="visitor_iframe" id="visitor_iframe" style="display:none;" onload="if(visit) {}"></iframe>
+        </div>
       </div>
 
       <div id="-Education" class="not_Content">
