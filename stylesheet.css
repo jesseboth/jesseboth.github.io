@@ -171,6 +171,13 @@ h4{
   display: inline-block;
 }
 
+.social_links{
+  background-color: #0f99e3;
+  height: 50px;
+  width: 100px;
+
+}
+
 .nav {
   overflow: hidden;
   position: fixed;
@@ -250,6 +257,11 @@ h4{
   color: #0f99e3;
 }
 
+a{
+  color: black;
+  text-decoration: none;
+}
+
 #info{
   position: absolute;
   bottom:3%;
@@ -321,6 +333,11 @@ h4{
   white-space: nowrap;
   display: inline-block;
 }
+
+.linkjumpto{
+  font-size:x-large;
+}
+
 #TOP{
   opacity: .5;
   background-color: #333;

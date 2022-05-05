@@ -64,7 +64,7 @@ function switch_content(content_display){
 
 /*make the content visible*/
 function show_content(content_display){
-    data = ["-Blank", "-Home", "-Projects", "-AboutMe", "-Education"]
+    data = ["-Blank", "-Home", "-Projects", "-AboutMe", "-Education", "-Links"]
     current_hash = content_display
     for(i = 0; i < data.length; i++){
         document.getElementById(data[i]).classList.remove("Content");
@@ -164,11 +164,13 @@ window.onpopstate = function() {
             case "#Projects":
             case "#AboutMe":
             case "#Education":
+            case "#Links":
                 if(history.state != null){
                     jump_after_int = history.state["scroll"];                    
                 }
                 break
-            default:            
+            default:
+                break;          
         }
         
     }
@@ -190,7 +192,6 @@ function show_form(){
 }
 
 function submit_visitor(){
-    console.log("here")
     if(history.state == null){
         document.getElementById("entry.1970061792").value = Date();
         document.getElementById("visitor-form").submit();

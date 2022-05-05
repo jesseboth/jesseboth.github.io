@@ -27,6 +27,7 @@
     <a onclick="switch_content('Education'); jump_top()">Education</a>
     <a onclick="switch_content('Projects'); jump_top()">Projects</a>
     <a onclick="switch_content('AboutMe'); jump_top()">About Me</a>
+    <a onclick="switch_content('Links'); jump_top()">Links</a>
     <div id="info" class="info">
       <a class="contact_side" href="mailto:jessebot@buffalo.edu">Email</a>
       <a class="contact_side" href="tel:7162189712">Phone</a>
@@ -594,7 +595,33 @@
 
 
       </div>
-      <!-- CONTENT GOES HERE -->
+      
+      
+      <div id="-Links" class="not_Content">
+        <br>
+        <h2>Links</h2>
+        <div class="jumpto_container" id="Links_Links">
+          <span class="jumpto linkjumpto" onclick='switch_content("Home"); jump_top()'>Portfolio</span>
+          <span class="jumpto linkjumpto" onclick="window.location='https://github.com/jesseboth'">Github</span>
+          <span class="jumpto linkjumpto" onclick="window.location='https://www.linkedin.com/in/jesse-both/'">LinkedIn</span>
+        </div>
+        <br>
+        <h2>Contact</h2>
+        <div class="jumpto_container" id="Links_Contact">
+            <a class="jumpto linkjumpto" href="mailto:jessebot@buffalo.edu">Email</a>
+            <a class="jumpto linkjumpto" href="tel:7162189712">Phone</a>          
+        </div>
+        <br>
+        <h2>Explore</h2>
+        <div class="jumpto_container" id="Links_Projects">
+          <span class="jumpto linkjumpto" onclick='switch_content("Home"); jump_top()'>Home</span>
+          <span class="jumpto linkjumpto" onclick='switch_content("Projects"); jump_top()'>Projects</span>
+          <span class="jumpto linkjumpto" onclick='switch_content("Education"); jump_top()'>Education</span>
+          <span class="jumpto linkjumpto" onclick='switch_content("AboutMe"); jump_top()'>About Me</span>
+
+        </div>
+      </div>
+
       <div id="TOP" onclick="jump_top()">
         <img id="up_arrow" src="images/up.png" alt="up arrow">
         <span id="top">Top</span>
