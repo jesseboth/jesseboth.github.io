@@ -45,7 +45,6 @@
         <div class="introduction">
           <div class="edu">
             <h1 class="orbitron">Computer Engineer</h1>
-            <a class="small">Expected Graduation: May 2022</a>
           </div>
 
           <div class="headshot_container">
@@ -61,8 +60,9 @@
           </div>
         </div>
         <div class="text">
-          I am currently pursing a degree in Computer Engineering at the University at Buffalo. I have had an interest
-          in programming and hardware since I was little. I am pursuing computer engineering to further my
+          I graduated Magna Cum Laude from University at Buffalo with a degree in Computer Engineering.
+          I have had an interest in programming and hardware since I was little.
+          I am passionate about technology and I am constantly pursuing deeper
           knowledge about how the technology that surrounds us works.
 
           <br>
@@ -114,18 +114,22 @@
         </div>
 
         <div class="visitors" id="visit" style="display:none;">
-            <form class="visitor-form" name="visitor-form"
-              action="https://docs.google.com/forms/d/e/1FAIpQLSf9RaInC7JExlvQuii-wznxWZkfgohekcItxfUkhkNDzbdjQw/formResponse?"
-              id="visitor-form" target="visitor_iframe" onsubmit="visit=true;">
-              <input type="text" name="entry.1970061792" id="entry.1970061792" class="visitor-control"
-                placeholder="" required="" autofill="name">
-            </form>
-            <iframe name="visitor_iframe" id="visitor_iframe" style="display:none;" onload="if(visit) {}"></iframe>
+          <form class="visitor-form" name="visitor-form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSf9RaInC7JExlvQuii-wznxWZkfgohekcItxfUkhkNDzbdjQw/formResponse?"
+            id="visitor-form" target="visitor_iframe" onsubmit="visit=true;">
+            <input type="text" name="entry.1970061792" id="entry.1970061792" class="visitor-control" placeholder=""
+              required="" autofill="name">
+          </form>
+          <iframe name="visitor_iframe" id="visitor_iframe" style="display:none;" onload="if(visit) {}"></iframe>
         </div>
       </div>
 
       <div id="-Education" class="not_Content">
         <div class="jumpto_container">
+          <span class="jumpto" onclick='jump("SeniorDesign")'>Senior Design</span>
+          <span class="jumpto" onclick='jump("ControlSystems")'>Control Systems</span>
+          <span class="jumpto" onclick='jump("RobotAlgos")'>Robotic Algorithms</span>
+          <span class="jumpto" onclick='jump("OperatingSystems")'>Operating Systems</span>
           <span class="jumpto" onclick='jump("EmbeddedSystems")'>Embedded Systems</span>
           <span class="jumpto" onclick='jump("Microprocessors")'>Microprocessors</span>
           <span class="jumpto" onclick='jump("ComputationalIntelligence")'>Computational Intelligence</span>
@@ -141,15 +145,171 @@
         low level programming and microprocessors.
         <div class="break"></div>
 
+        <!-- Senior Design -->
+        <h2 id="SeniorDesign">Senior Design</h2>
+        For my senior design project, I worked with a group of 8 other students to
+        design and implement a sensory wall for a near by elementary school.
+        <br>
+        The first thing the team decided on was what we were going to create. We decide
+        upon making 4 games which we decided on as a group. The 4 games we made were
+        Bop it, Whack-a-mole/Simon-Says, a maze wheel and an LED matrix drawing game.
+        During the initial design phase of the project, one of our main concerns was
+        how we were going to mount the games to the wall. As a group we decided that
+        back plate for each game would be consistent across all modules except for the
+        maze wheel. We found that toggle bolts would be a good solution to mount our
+        back plates to the wall. There were many other small details that we discussed
+        as a group such as power routing and finding the specific hardware that we would
+        need.
+        <br>
+        We split into pairs to implement each game. I worked on the LED matrix art game
+        that we named "Picture This". My partner and I spent a lot of time figuring out
+        how we were going to control the game. As opposed to the other games, we had
+        much more creative freedom because this was not already a well defined game.
+        After many meetings, we decided on a joystick to control the cursor, and several
+        arcade push buttons to perform operations such as changing color, change draw mode,
+        reset and erase. The art would be displayed on 2 64x32 matrices chained together
+        to make one large 64x64 display. The microcontroller that we chose was a teensy 4.
+        The main reasoning behind this was that there was a product called a "LED Matrix
+        Smart Shield" which made driving the matrices much easier because we would not have
+        to worry as much about the pin out that was required.
+        <br>
+        During our implementation phase, the main set back was waiting for parts. The main
+        element that we were missing for a long time was the smart shield. While there was
+        documentation that showed the pinout of the matrix, there was still some ambiguity that
+        made testing our code difficult. One of the unfortunate side effects of using the
+        smart shield was the library that we had intended on using was intended to be used
+        in the Arduino ide. Due to this, the code isn't set up in a way that I would usually
+        try to implement something like this, but this important thing is that everything worked
+        in the end.
+        <br>
+        One cool thing the professor did for this class was allowing the class to vote on who
+        had the best designed project (1st semester) and best implemented project (2nd semester)
+        and whoever won the vote would get a guaranteed A for that semester.
+        My group happened to win the vote for the best implementation.
+
+        <br>
+        The code for these project can be found on
+        <a class="link" href="https://github.com/Wall-Group/PictureThis">Github</a>.
+        <div class="scroll_container">
+          <div class="scroll_button"></div>
+          <div class="scrollimg_container">
+            <div class="scrollimg">
+              <img class="content_image" src="images/PictureThis.jpg" alt="senior">
+              <img class="content_image" src="images/Memory.jpg" alt="senior">
+              <img class="content_image" src="images/maze.jpg" alt="senior">
+              <img class="content_image" src="images/Bopit.jpg" alt="senior">
+              <img class="content_image" src="images/wall.png" alt="senior">
+            </div>
+          </div>
+          <div class="scroll_button"></div>
+        </div>
+
+        <div class="break"></div>
+        <!-- Senior Design -->
+
+        <!-- Control Systems -->
+        <h2 id="ControlSystems">Control Systems</h2>
+        This was another project based class and the goal was, by the end of the semester
+        to have a working control system to be able to show at the engineering demo day.
+        <br>
+        I worked in a group of 4 and we decide on making an automated blinds control system.
+        Our inputs for the system were temperature and light level. The amount that the blinds
+        were opened adjusted according to those two inputs using 2 stepper motors.
+        <br>
+        The first thing we brainstormed on was how we were going to design the blinds - would
+        they be vertical or horizontal, could they be opened manually. We decided on vertical
+        blinds and had originally planned to only use 1 stepper motor, but after testing we found
+        that the wire that held the blinds would pinch and cause the blinds on the end to not be
+        able to behave properly. Switching to two steppers, one on each end solved this problem.
+        Something that we were not able to solve in the timeframe that was given was there were times
+        when the temperature sensor would read corrupt values and cause the system to get stuck in
+        its current state until a correct reading was read. As it turns out, temperature is difficult
+        for cheap sensors to read. It may have been better to find a better sensor that could provide
+        a more consistent reading.
+        <br>
+        In order to have a nice prototype for demo day, we built a small window. I designed and 3D printed
+        some mounts to hold the stepper motors in place. We also 3D printed the blinds to give them a more
+        consistent look as opposed to cutting them from some other material. We also found some spare
+        acrylic to act as the "glass" for the window.
+        <br>
+        The code for these project can be found on
+        <a class="link" href="https://github.com/bodhiswattwa/Automated-Blind-Controls">Github</a>.
+        <div class="scroll_container">
+          <div class="scroll_button"></div>
+          <div class="scrollimg_container">
+            <div class="scrollimg">
+              <img class="content_image" src="images/blinds_design.png" alt="control">
+              <img class="content_image" src="images/blinds.jpg" alt="control">
+
+            </div>
+          </div>
+          <div class="scroll_button"></div>
+        </div>
+
+        <div class="break"></div>
+        <!-- Control Systems -->
+
+        <!-- Robotic Algorithms -->
+        <h2 id="RobotAlgos">Robotic Algorithms</h2>
+        In this class I implemented several common algorithms that are often used in robotics using
+        ROS (Robotic Operating System).
+        Some of those algorithms include obstacle detection and avoidance, BUG2, A*, RANSAC, and Bayes
+        algorithm.  All of these projects were done using simulation software and visualization guis
+        that were provided through ROS.  All of these algorithms were done in C++ with the exception
+        of matplotlib visualizations being done in python.
+        <br>
+
+        <br>
+        <div class="scroll_container">
+          <div class="scroll_button"></div>
+          <div class="scrollimg_container">
+            <div class="scrollimg">
+              <img class="content_image" src="images/ransacbug2.gif" alt="robot">
+              <img class="content_image" src="images/a_star.gif" alt="robot">
+              <img class="content_image" src="images/bayes.gif" alt="robot">
+              <img class="content_image" src="images/pursuer.gif" alt="robot">
+            </div>
+          </div>
+          <div class="scroll_button"></div>
+        </div>
+
+        <div class="break"></div>
+        <!-- Robotic Algorithms -->
+
+        <!-- Operating Systems -->
+        <h2 id="OperatingSystems">Operating Systems</h2>
+        This class is less "flashy" to talk about, but I learned a lot about operating systems
+        and how the kernel works.  The projects for this class were based on Pintos, which
+        is an incomplete operating system and through out the semester we implemented threads,
+        scheduling, user programs, and virtual memory.
+        <br>
+        For the threads project, we used synchronization primitives' such as semaphores and locks
+        to protect the threads critical section.  We also implemented 2 forms of scheduling which 
+        included MLFQS and priority.
+        <br>
+        The next part of the project was to implement a way for user programs to be run on the OS.
+        I enjoyed this part much more than the first because it was more memory management oriented.
+        This involved stack packing process call inputs, and working with the file system.  We also 
+        had to keep track of what was considered user memory vs kernel memory and if a program
+        tried to access invalid memory a page fault would be sent.
+        <br>
+        We also implemented virtual memory which was much more on the theoretical side of things.
+        We learned that virtual memory allows the OS to act as if it has infinite memory
+        by keeping the active processes in RAM and inactive processes on disk.  When a context switch
+        is necessary the OS will determine if it needs to move data out of RAM onto disk if there is 
+        not enough space for the new process or just place the new processes data into RAM.
+        <div class="break"></div>
+        <!-- Operating Systems -->
+
         <h2 id="EmbeddedSystems">Embedded Systems</h2>
         For this class a Nucleo-144 was used.
         I implemented 2 major projects, a timer system and what I called
         an "Alternative Hearing Device".
         <br>
         The timer project used a 4x4 keypad to control the timer and a 16x2 LCD
-        to display the time and prompts.  A string of number inputs were input and
+        to display the time and prompts. A string of number inputs were input and
         parsed to be converted into minutes and seconds so that the time could be
-        decremented via a timer interrupt every second.  I wrote the code with the 
+        decremented via a timer interrupt every second. I wrote the code with the
         intention of allowing the time to go beyond 9:59, but due to the restrictions
         of the project description it is currently set to not go past the ten minute
         mark.
@@ -401,12 +561,12 @@
 
         <div class="break"></div>
         <h2 id="2048">2048</h2>
-        This project was created with the same microcontroller as used in my 
+        This project was created with the same microcontroller as used in my
         <a class="link" href="https://jesseboth.github.io/#Education#Microprocessors">Microprocessors</a>
-        class with the addition of the EduBase.  When writing code for this microcontroller,
+        class with the addition of the EduBase. When writing code for this microcontroller,
         there are not any preexisting libraries, so everything has to be written from scratch (LCD code
-        was adapted from external source).  All interrupts and GPIO configurations had to be done via 
-        bitwise control of the necessary registers.  There is more information about the project implementation
+        was adapted from external source). All interrupts and GPIO configurations had to be done via
+        bitwise control of the necessary registers. There is more information about the project implementation
         on <a class="link" href="https://github.com/jesseboth/2048">Github</a>.
         <div class="scroll_container">
           <div class="scroll_button"></div>
@@ -595,21 +755,22 @@
 
 
       </div>
-      
-      
+
+
       <div id="-Links" class="not_Content">
         <br>
         <h2>Links</h2>
         <div class="jumpto_container" id="Links_Links">
           <span class="jumpto linkjumpto" onclick='switch_content("Home"); jump_top()'>Portfolio</span>
           <span class="jumpto linkjumpto" onclick="window.location='https://github.com/jesseboth'">Github</span>
-          <span class="jumpto linkjumpto" onclick="window.location='https://www.linkedin.com/in/jesse-both/'">LinkedIn</span>
+          <span class="jumpto linkjumpto"
+            onclick="window.location='https://www.linkedin.com/in/jesse-both/'">LinkedIn</span>
         </div>
         <br>
         <h2>Contact</h2>
         <div class="jumpto_container" id="Links_Contact">
-            <a class="jumpto linkjumpto" href="mailto:jesse.both9@gmail.com">Email</a>
-            <a class="jumpto linkjumpto" href="tel:7162189712">Phone</a>          
+          <a class="jumpto linkjumpto" href="mailto:jesse.both9@gmail.com">Email</a>
+          <a class="jumpto linkjumpto" href="tel:7162189712">Phone</a>
         </div>
         <br>
         <h2>Explore</h2>
