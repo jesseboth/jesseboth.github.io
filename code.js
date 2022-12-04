@@ -2,7 +2,7 @@
 window.onhashchange = go_hash
 
 /*start up function*/
-function run(){ 
+function run(){
  go_hash()
  submit_visitor()
  setInterval(get_scroll, 200)
@@ -51,7 +51,7 @@ function close_nav(){
 
 /*change what content page is visible*/
 function switch_content(content_display){
-    history.replaceState({"title":current_hash, 
+    history.replaceState({"title":current_hash,
     "scroll": scroll_by},
     '');
 
@@ -80,23 +80,23 @@ function show_content(content_display){
 }
 
 /*jump to an element*/
-function jump(element){  
+function jump(element){
     jump_after = element
-    var get = document.getElementById(element);  
+    var get = document.getElementById(element);
     document.getElementById("Content_Container").scrollTo(0,get.offsetTop);
-} 
+}
 
 /*jump to integer position on page*/
 function jump_int(integer){
-    document.getElementById("Content_Container").scrollTo(0,integer); 
+    document.getElementById("Content_Container").scrollTo(0,integer);
 }
 
 /*jump to the top*/
 function jump_top(){
     document.getElementById("Content_Container").scroll(0,0);
-    history.replaceState({"title":current_hash, 
+    history.replaceState({"title":current_hash,
     "scroll": 0},
-    ''); 
+    '');
 }
 
 /*operation to determine what hash is in url*/
@@ -166,28 +166,28 @@ window.onpopstate = function() {
             case "#Education":
             case "#Links":
                 if(history.state != null){
-                    jump_after_int = history.state["scroll"];                    
+                    jump_after_int = history.state["scroll"];
                 }
                 break
             default:
-                break;          
+                break;
         }
-        
+
     }
     content = false
 }
 
 submitted = false;
 function submit_form(){
-    document.getElementById("contact").style = "display:none;"   
-    document.getElementsByClassName("form-submitted")[0].style = "display:block;"            
+    document.getElementById("contact").style = "display:none;"
+    document.getElementsByClassName("form-submitted")[0].style = "display:block;"
 }
 function return_form(){
-      document.getElementById("contact").style = "display:none;"        
+      document.getElementById("contact").style = "display:none;"
 }
 function show_form(){
     if(!submitted){
-        document.getElementById("contact").style = "display:block;"            
+        document.getElementById("contact").style = "display:block;"
     }
 }
 
